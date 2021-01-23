@@ -5,7 +5,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        app: './src/index.js',
+        app: './src/public/index.js',
     },
     // devtool: 'inline-source-map',
     plugins: [

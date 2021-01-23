@@ -1,19 +1,19 @@
 const webpack = require('webpack');
 const middleware = require('webpack-dev-middleware');
-const compiler = webpack(require('../webpack.config.js'));
+const compiler = webpack(require('../../webpack.config.js'));
 const path = require('path');
 const express = require('express');
 const app = express();
 
 app.use(
   middleware(compiler, {
-    // webpack-dev-middleware options
+    // (optional webpack-dev-middleware options)
   })
 );
 app.use(express.json());
 
 app.get('/info', function(req, res) {
-    const packageJson = require('../package.json');
+    const packageJson = require('../../package.json');
     res.send({
         name: packageJson.name,
         version: packageJson.version
@@ -21,7 +21,7 @@ app.get('/info', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-    const index = path.resolve('./public/index.html');
+    const index = path.resolve('./src/public/index.html');
     res.sendFile(index);
 });
 

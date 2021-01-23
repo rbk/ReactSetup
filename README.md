@@ -1,16 +1,20 @@
-# React Setup
+# ReactSetup (Now with a webpacked node server for creating an api)
 
-I wanted to add ReactJS to a project I was working on so I needed to setup the webpack
-config manually. This is the result of that effort after pulling out all application specific code.
+**Use for prototyping**
 
-This is basically `create-react-app` with less features!
+## Features
 
-## Usage
+- React with Webpack and Babel ready to go
+- Express server
 
-From terminal:
+## Setup
 
-1. `git clone git@github.com:rbk/ReactSetup.git`
-1. `cd ReactSetup`
 1. `npm i`
-1. `npm start`
-1. Go to http://localhost:9000
+2. `npm run dev`
+3. Server runs at port 3001
+
+## TODO
+
+- Setup unit testing (mocha, chai, chancejs, etc)
+- Setup feature testing with cucumber js
+- Redux?
