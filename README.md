@@ -6,6 +6,7 @@
 
 - React with Webpack and Babel ready to go
 - Express server
+- Auto reload server
 
 ## Setup
 
